@@ -1,1 +1,1 @@
-web: gunicorn mukumbaceilings.wsgi --log-file
+web: gunicorn mukumbaceilings.wsgi --log-file -
