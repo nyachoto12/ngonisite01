@@ -1,0 +1,127 @@
+
+  {% extends 'base.html'%}
+  {% load static %} 
+  {% load i18n %}
+  {% block head_title %}{% trans "M..C..C|Contact Us" %}{% endblock %}
+<body id="body"> 
+  {% block content %}
+ 
+  <section class="intro_section page_mainslider ds">
+    <div class="flexslider" data-dots="true" data-nav="te">
+        <ul class="slides">
+            <li> <img src="{% static 'img/picz/ceilingbg2.jpg' %}"  alt="one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                      <h2 style="font-size: 50px;">
+                                      CONTACT US</h2>
+                                        
+                                         </div>
+                                   
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                       <i><p >Thank you for reaching us. We are always ready for you.
+                                        Feel free to contact us and tell us what you got  .</p></i> 
+                                    </div>
+                                </div>
+                                <!-- eof .slide_description -->
+                            </div>
+                            <!-- eof .slide_description_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+        </ul>
+    </div>   
+  </section> 
+  <section class="ds ms columns_padding_25 section_padding_top_100 section_padding_bottom_100">
+    <div class="container"style="width: 90%; margin-left: 130px;">
+      <div class="cotact">
+        <div class="row " style="margin-top: 0px;">
+          <div class="col-sm-12">
+            <h4>quotations here</h4>
+            <p style="color: cadetblue; margin-top: 10px"><i>Please register your project here</i> </p>
+          </div>
+        </div>
+        <div class="row">
+         
+          <div class="col-md-8 to_animate" data-animation="scaleAppear"></div>
+            <form class=" columns_padding_5 bottommargin_40" method="post" action="contact">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group bottommargin_0"> <label for="name">Full Name <span class="required">*</span></label> <i class="fa fa-user highlight" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">											</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group bottommargin_0"> <label for="phone">Phone Number<span class="required">*</span></label> <i class="fa fa-phone highlight" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">											</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group bottommargin_0"> <label for="email">Email address<span class="required">*</span></label> <i class="fa fa-envelope highlight" aria-hidden="true"></i> <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">											</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group bottommargin_0"> <label for="location">Home Address<span class="required">*</span></label> <i class="fa fa-envelope highlight" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="address" id="address" class="form-control" placeholder="Where are you">											</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group bottommargin_0"> <label for="location">Gender<span class="required">*</span></label> <i class="fa fa-envelope highlight" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="gender" id="gender" class="form-control" placeholder="Gender">											</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group bottommargin_0"> <label for="subject">Project<span class="required">*</span></label> <i class="fa fa-flag highlight" aria-hidden="true"></i> <input type="text" aria-required="true" size="30" value="" name="subject" id="subject" class="form-control" placeholder="Subject">											</div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="contact-form-message form-group bottommargin_0"> <label for="message">What do you need from us</label> <i class="fa fa-comment highlight" aria-hidden="true"></i> <textarea aria-required="true" rows="3" cols="45" name="message" id="message" class="form-control" placeholder="Message"></textarea> </div>
+                </div>
+                <div class="col-sm-12 bottommargin_0">
+                  <div class="contact-form-submit topmargin_10"> <button type="submit" id="contact_form_submit" name="contact_submit"  size="30" class="theme_button color1 wide_button margin_0">Send message</button> </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4 to_animate" data-animation="scaleAppear">
+            <ul class="list1 no-bullets no-top-border no-bottom-border">
+              <li>
+                <div class="media">
+                  <div class="media-left"> <i class="rt-icon2-shop highlight fontsize_18"></i> </div>
+                  <div class="media-body">
+                    <h6 class="media-heading grey">Postal Address:</h6> PO Box 128 Lomagundi Rd., Avondale West, Harare, Zimbabwe </div>
+                </div>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="media-left"> <i class="rt-icon2-phone5 highlight fontsize_18"></i> </div>
+                  <div class="media-body">
+                    <h6 class="media-heading grey">Phone:</h6> 0778 405 957 </div>
+                </div>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="media-left"> <i class="rt-icon2-stack4 highlight fontsize_18"></i> </div>
+                  <div class="media-body">
+                    <h6>Fax:</h6>xxxxxxxxxxxxxxxxxxxx </div>
+                </div>
+              </li>
+              <li>
+                <div class="media">
+                  <div class="media-left"> <i class="rt-icon2-mail highlight fontsize_18"></i> </div>
+                  <div class="media-body greylinks">
+                    <h6 class="media-heading grey">Email:</h6> <a href="mailto:your@mail.com">mukumbaceilings@@gmail.com</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    
+  </section>
+
+    
+{% endblock %}
+</body>
+
+

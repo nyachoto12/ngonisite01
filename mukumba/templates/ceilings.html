@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% load static %} 
+{% block head_title %}{% trans "M..C..C|Services" %}{% endblock %}{% block head_title %}{% trans "M..C..C|Ceilings" %}{% endblock %}
+<body id="body"> 
+  {% block content %}
+ 
+            <section class="intro_section page_mainslider ds">
+                <div class="flexslider" >
+                    <ul class="slides">
+                        <li> <img src="{% static 'img/picz/ceilingbg2.jpg' %}"  alt="one">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                <div class="intro-layer" data-animation="fadeInUp">
+                                                  <h2 style="font-size: 50px;">
+                                                CEILINGS</h2>
+                                                    
+                                                     </div>
+                                               
+                                                <div class="intro-layer" data-animation="fadeInUp">
+                                                   <i><p >At Mukumba Ceilings Company, we provide all types of ceilings.
+                                                    Please find your favourite type here and place an order, we will reach you wherever you are  .</p></i> 
+                                                </div>
+                                            </div>
+                                            <!-- eof .slide_description -->
+                                        </div>
+                                        <!-- eof .slide_description_wrapper -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container -->
+                        </li>
+                    </ul>
+                </div>   
+            </section>
+                <section class="ds ms columns_padding_25 section_padding_top_100 section_padding_bottom_100">
+                
+              <div class="container-fluid " >
+                <div class="intro-image padding " >
+                <div class="col-md-12 col-lg-6" id="ceilings">
+                      <h4> Standard Ceilings at <a href="/" class="scrollto"><span>..</span>M<span>..</span>C<span>..</span>C</a> </h4>
+
+                      These are 6mm ceiling boards nailed or screwed into brandering, joined with a steel H-Strip joiner strip.
+                      Do not plaster 6mm ceiling board. The board is not manufactured to allow the for the extra layer of plaster required on the joints or to carry the weight of the plaster across the complete ceiling board.
+                    </div>
+            
+                    <div class="col-lg-12"> 
+                        <img src="{% static 'img\picz\roundnice.jpg' %}" alt="" class="image-fluid"> </div>
+                 </div>
+               </div>
+        
+        </section>
+  {% endblock %}
+
+</body>

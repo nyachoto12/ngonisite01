@@ -1,0 +1,143 @@
+{% extends 'base_shop.html'%}
+{% load static %} 
+{% load i18n %}
+{% block head_title %}{% trans "M..C..C|Products" %}{% endblock %}
+<body>
+  {% block content%}
+
+  <!--Main layout-->
+  <main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <div class="view overlay">
+            <img src="{{item.image.url}} " class="card-img-top"
+              alt="">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <!--Content-->
+          <div class="p-4">
+
+            <div class="mb-3">
+              <a href="">
+                <span class="badge purple mr-1">{{object.get_category_display}}</span>
+              </a>
+            
+            </div>
+
+            <div class="mb-3">
+              <a href="">
+                <span class="badge blue mr-1">{{object.title}}</span>
+              </a>
+            
+            </div>
+
+            <p class="lead">
+
+              
+              {% if object.discount_price%}
+              <span class="mr-1">
+                <del>${{object.price}}</del>
+              </span>
+             <span>${{object.discount_price}}</span> 
+              {%else%}
+             <span>${{object.price}}</span> 
+            {%endif%}
+            </p>
+
+            <p class="lead font-weight-bold">Description</p>
+
+            <p>{{object.description}}</p>
+           {% comment %}
+            <form class="d-flex justify-content-left">
+              <!-- Default input -->
+              <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
+              
+            </form>
+            {% endcomment %}
+            <a href="{{object.get_add_to_cart_url}}" class="btn btn-primary btn-md my-0 p" > Add to cart
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </a>
+          <a href="{{object.get_remove_from_cart_url}}" class="btn btn-danger btn-md my-0 p" > Remove from cart
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </a>
+          
+          </div>
+          <!--Content-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <hr>
+
+      <!--Grid row-->
+     
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+    
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/MDBootstrap" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+
+      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+        <i class="fab fa-google-plus-g mr-3"></i>
+      </a>
+
+      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+        <i class="fab fa-dribbble mr-3"></i>
+      </a>
+
+      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+        <i class="fab fa-pinterest mr-3"></i>
+      </a>
+
+      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+        <i class="fab fa-codepen mr-3"></i>
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    {% endblock%}
+  </body>

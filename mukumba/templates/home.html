@@ -1,0 +1,125 @@
+{% extends 'base.html'%}
+{% load static %} 
+{% load i18n %}
+{% block head_title %}{% trans "Home| M..C..C" %}{% endblock %}
+<body id="body"> 
+  {% block content %}
+  <section class="intro_section page_mainslider ds">
+    <div class="flexslider" data-dots="true" data-nav="te">
+        <ul class="slides">
+            <li> <img src="{% static 'img/picz/nicepicboys.jpg' %}"  alt="one">
+                <div class="container">
+                    <div class="row">
+ 
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                    
+                                      <h2  style=" font-size: 50px;
+                                      ">CEILINGS</h2>
+                                         </div>
+                                   
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                        <i><p > The beauty of your home or office is all that matters. As Mukumba Ceilings we are committed to making your resting and working enviroments look Much More Great.</p></i>
+                                    </div>
+                                </div>
+                                <!-- eof .slide_description -->
+                            </div>
+                            <!-- eof .slide_description_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li> <img src=" {% static 'img/shinning1.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                     
+                                          <h2 style="background-color:transparent; color:  #444444; font-size: 50px;
+                                          ">SHINNING</h2>
+                                    </div>
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                        <i><p  style="color:#222222;">Walls that are shinned have a unique look and that makes a home feels like Home.</p></i>
+                                    </div>
+                                </div>
+                                <!-- eof .slide_description -->
+                            </div>
+                            <!-- eof .slide_description_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li> <img src="{% static 'img/picz/frame.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="slide_description_wrapper">
+                                <div class="slide_description">
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                      
+                                            <h2 style="background-color:transparent; color:  #444444; font-size: 50px;
+                                            ">FRAMMING</h2>
+                                    </div>
+                                    <div class="intro-layer" data-animation="fadeInUp">
+                                        <i><p  style="color:#222222;">Our main goal here is to ensure that your beautiful ceilings is attached to a strong frame that guarantees Long Life with no cracks</strong>.</p></i>
+                                    </div>
+                                </div>
+                                <!-- eof .slide_description -->
+                            </div>
+                            <!-- eof .slide_description_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+        </ul>
+    </div>
+    <section id="about" class="ds ms page_about parallax section_padding_top_130 section_padding_bottom_75 table_section table_section_md columns_margin_bottom_30">
+        {% if messages %}
+        {% for message in messages %} 
+        <h4 style="color: green;">{{message}}</h4>
+        {% endfor%}
+        {% endif%}
+        <div class="container">
+            <div class="intro-image padding " >
+                <div class="col-md-12 col-lg-6" >
+                  <h4>What do we offer at <a href="/" class="scrollto"><span>..</span>M<span>..</span>C<span>..</span>C</a> </h4>
+                  <ul>
+                    <li><a href="#"><h4>Ceilings </h4></a>
+                        <br>
+                        General repairs and maintenance
+                        <br>
+                        We can help you to plan your project from start to finish
+                    </li>
+                    <li><a href="#"><h4>Skimming</h4></a><br>
+                    We guarantees quality using materials such as rhinost,rhnolite and many more</li>
+                    <li><a href="#"><h4>Framming</h4></a><br>
+                    Before we installs your ceilings, we make sure that its hanged to a strong frame</li>
+                
+                  </ul></li>
+                </div>
+        
+                <div class="col-lg-12"> 
+                    <img src="{% static 'img\picz\roundnice.jpg' %}" alt="" class="image-fluid"> </div>
+             </div>
+           </div>
+    
+    </section>
+   {% endblock %}
+
+</body>
+
+
+

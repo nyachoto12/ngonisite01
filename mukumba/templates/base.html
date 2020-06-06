@@ -1,0 +1,215 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block head_title %}{% endblock %}</title>
+  {% block extra_head %}
+  {% endblock %}
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta content="Author" name="Ngonie">
+
+    <!-- Favicons
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  -->
+    <!-- Google Fonts -->
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700' %}" rel="stylesheet">
+  
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' %}"/>
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/export/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/export/bootstrap.min.css' %}">
+    <!-- Main Stylesheet File -->
+    <link href="{% static './css/style.css' %}" rel="stylesheet"> 
+    <link href="{% static './css/lightbox.min.css' %}" rel="stylesheet"> 
+    <link href="{% static 'css2/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css2/mdb.min.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'css2/style.min.css' %}" rel="stylesheet">
+  </head>
+<style media="screen">
+.loader{
+  position: fixed;
+  z-index: 99;
+ width: 100%;
+height: 100%;
+  display: flex;
+margin-left: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.loader h5{
+
+margin-left: 150px;
+  color: blue;
+ font-weight: 600;
+ font-style: italic;
+}
+.loader .hidden{
+  animation: fadeout 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeout{
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+</style>
+<header id="header">
+ 
+    <div class="container">
+      <div class="  loader ">
+        <div class="col-md-12 col-lg-6" >
+          <h5>Please wait while loading....</h5>
+        </div>
+      
+      </div>
+
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar" id="nav-menu-container">
+        
+        
+        <ul class="nav-menu" class="navbar-nav mr-auto">
+
+          <a class="navbar-brand waves-effect" href="/" target="_blank">
+            <strong class="blue-text">MUKUMBA CEILINGS COMPANY</strong>
+          </a>
+          <li class="menu-has-children"><a class="menu-active" href="/">Home</a>
+          <ul>
+              <li><a href="myshop_mail/shop">Shop</a></li>
+        
+            </ul></li>
+          </li>
+          <li class="menu-has-children"><a href="about">About Us</a>
+            <ul>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="contact">Get in Touch</a></li>
+             
+            </ul></li>
+          <li class="menu-has-children"> <a href="services">Services</a>
+            <ul>
+              <li><a href="ceilings">Ceilings</a></li>
+              <li><a href="#">Skimming</a></li>
+              <li><a href="#">Framming</a></li>
+          
+            </ul></li>
+          <li class="menu-has-children"><a href="gallery">Gallery</a>
+            
+          </li>
+          <li class="menu-has-children"> <a href="contact">Contact</a>
+            <ul>
+              <li><a href="about">About Us</a></li>
+        
+            </ul></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  <div class="dev" style="height: 80px; background-color:#2600"></div>
+  
+{% block content%}
+
+{%endblock%}
+  
+  <hr style="color:whitesmoke;">
+  <!-- eof flexslider -->
+  <footer class="page_footer ds section_padding_top_100 section_padding_bottom_100 columns_padding_25">
+    <div class="container">
+      <div class="row" >
+        <div class="footer">
+          <div class="col-md-4 text-center">
+            <div class="widget widget_text">
+              <h4 class="widget-title with_line"> Contact Us </h4>
+              <div>
+                <div class="media small-media inline-block">
+                  <div class="media-left"> <i class="fa fa-map-marker highlight" aria-hidden="true"></i> </div>
+                  <div class="media-body"> 128 Avondale West, Harare, Zimbabwe </div>
+                </div><br>
+                <div class="media small-media inline-block">
+                  <div class="media-left"> <i class="fa fa-phone highlight" aria-hidden="true"></i> </div>
+                  <div class="media-body"> 0778405957 </div>
+                </div><br>
+                <div class="media small-media inline-block">
+                  <div class="media-left"> <i class="fa fa-pencil highlight" aria-hidden="true"></i> </div>
+                  <div class="media-body"> smkumba_ceiling@example.com </div>
+                </div><br>
+                <div class="media small-media greylinks inline-block">
+                  <div class="media-left"> <i class="fa fa-internet-explorer highlight" aria-hidden="true"></i> </div>
+                  <div class="media-body"> <a href="www.mcc.com">Website</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 text-center">
+            <div class="widget widget_mailchimp">
+              <h4 class="widget-title with_line">Newsletter</h4>
+              <form class="signup" action="gallery" method="post">
+                <p class="bottommargin_20">Subscribe to our mailing list to receive new updates and special offers:</p>
+                <div class="form-group-wrap">
+                  <div class="form-group"> <label for="mailchimp" class="sr-only">Enter your email here</label> <input name="email" type="email" id="mailchimp" class="mailchimp_email form-control" placeholder="Your Email Address*"> 
+                  </div> <button type="submit" class="theme_button color1 no_bg_button" style="background: teal;">Subscribe</button>										</div>
+                <div class="response"></div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 text-center">
+            <div class="widget widget_mailchimp">
+              <h4 class="widget-title with_line">About Designer</h4>
+              <form class="signup" action="comment" method="post">
+                <p class="bottommargin_20">Subscribe to my mailing list to receive new updates and special offers from me:</p>
+                <div class="form-group-wrap">
+                  <div class="form-group"> <label for="mailchimp" class="sr-only">Enter your email here</label> <input name="email" type="email" id="mailchimp" class="mailchimp_email form-control" placeholder="Your Email Address*"> 
+                  </div> <button type="submit" class="theme_button color1 no_bg_button" style="background: teal;">Comment</button>										</div>
+                <div class="response"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</div>
+</main>
+<!-- JavaScript libraries -->
+<script type="text/javascript" src="{% static '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' %}"></script>
+<script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+<script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+<script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+<script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/magnific-popup/magnific-popup.min.js' %}"></script>
+<script src="{% static 'lib/sticky/sticky.js' %}"></script> 
+<script src="{% static 'contact/jqBootstrapValidation.js' %}"></script> 
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/myjs.js' %}"></script>
+<script type="text/javascript"> 
+window.addEventListener("load",function(){
+const loader = document.querySelector('.loader');
+loader.className += " hidden"
+});
+</script>
+<script src="{% static 'js/compressed.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<!--
+ 
+<script src="js/mediaelement-and-player.min.js"></script>
+<script src="js/mediaelement-migrate.min.js"></script>
+
+  -->
+
+</html>

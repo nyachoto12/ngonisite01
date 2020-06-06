@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% load static %} 
+
+<body id="body">
+    {% block content%}
+    
+   <h1>Here is the list of items</h1>
+   <div class="items" style="color: blue; ">
+    {% for item in items%}
+    {{item}}
+       {%endfor%}
+   </div>
+  
+    {% endblock %}
+
+</body>

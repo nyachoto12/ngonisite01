@@ -1,0 +1,76 @@
+{% extends 'base_shop.html'%}
+{% load static %} 
+{% load i18n %}
+{% block head_title %}{% trans "M..C..C|Orders" %}{% endblock %}
+
+
+<body>
+{% block content %}
+  <main>
+    <div class="container" style="color: cadetblue; margin-top: 5em">
+
+        <div class="table-responsive text-nowrap">
+            <h2>My Orders</h2>
+            <table class="table">
+              <thead style="color: cadetblue; font-weight:bold">
+                <tr>
+                  <th scope="col">Order ID</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price
+                    $(USD)/RTGS-equiv
+                  </th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Cost</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                   {% for order_item in object.items.all%}
+                  <th scope="row">{{ forloop.counter}}</th>
+                  <td>{{order_item.item.title}}</td>
+                  <td>{{order_item.item.price}}</td>
+                  <td> <a href="{% url 'myshop_mail:remove_item_from_cart' order_item.item.slug %}"class=" fas fa-minus mr-2 " style="background-color: brown; font-size:inherit; width:60px; color:antiquewhite ; padding:3px">Remove</a> 
+                     {{order_item.quantity}}
+                    <a href="{% url 'myshop_mail:add_to_cart' order_item.item.slug %}" class=" fas fa-plus ml-2" style="background-color: green; font-size:inherit; width:inherit; color:antiquewhite;padding:3px" >Add</a> 
+                    </td>
+                  <td> 
+                    {% if order_item.item.discount_price%}
+                    {{order_item.get_total_item_discount_price}}
+                   <span class=" badge badge-primary">Saving ${{order_item.get_total_saved}}</span>
+                    {% else%}
+                    {{order_item.get_total_item_price}}
+                    {% endif %}
+                    <a style="color: white; " href="{% url 'myshop_mail:remove_from_cart' order_item.item.slug  %}"><i class="fas fa-trash float-right" style=" background-color: blue"> Bin</i> </a>
+                  </td>
+                
+                </tr>
+                {% empty%}
+                <tr>
+                  <td colspan="5"> Your cart is empty</td>
+                </tr>
+                {%endfor%}
+                <tr>
+                  <td colspan="4"><b>Total</b></td>
+                  <td><b>${{object.get_total}}</b></td>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    <a class="btn btn-danger float-right ml-2"  href="/myshop_mail/checkout">Proceed to Checkout</a>
+                    <a class="btn btn-secondary float-right"  href="/myshop_mail/shop">Continue Shopping</a>
+                    
+                  </td>
+                </tr>
+               
+              </tbody>
+            
+            </table>
+          
+          </div>
+
+    </div>
+  </main>
+  <!--Main layout-->
+ {% endblock %}
+</body>
