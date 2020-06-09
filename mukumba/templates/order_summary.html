@@ -1,4 +1,5 @@
 {% extends 'base_shop.html'%}
+
 {% load static %} 
 {% load i18n %}
 {% block head_title %}{% trans "M..C..C|Orders" %}{% endblock %}
@@ -37,8 +38,8 @@
                     </td>
                   <td> 
                     {% if order_item.item.discount_price%}
-                    {{order_item.get_total_item_discount_price}}
-                   <span class=" badge badge-primary">Saving ${{order_item.get_total_saved}}</span>
+                    {{order_item.get_total_saved}}
+                   <span class=" badge badge-primary">Saving ${{order_item.get_total_item_discount_price}}</span>
                     {% else%}
                     {{order_item.get_total_item_price}}
                     {% endif %}

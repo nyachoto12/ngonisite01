@@ -75,52 +75,55 @@ margin-left: 150px;
       
       </div>
 
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar" id="nav-menu-container">
-        
-        
-        <ul class="nav-menu" class="navbar-nav mr-auto">
-
-          <a class="navbar-brand waves-effect" href="/" target="_blank">
-            <strong class="blue-text">MUKUMBA CEILINGS COMPANY</strong>
-          </a>
-          <li class="menu-has-children"><a class="menu-active" href="/">Home</a>
-          <ul>
-              <li><a href="myshop_mail/shop">Shop</a></li>
-        
-            </ul></li>
-          </li>
+      <nav class="fixed-top " >
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <label for=""> <a class="logo" href="/" target="_blank">
+          <strong >MUKUMBA CEILINGS COMPANY</strong>
+        </a></label>
+        <ul  >
+         
+          <li class="menu-has-children"><a class="menu-active" href="/">Home</a></li>
+          <li><a href="myshop_mail/shop">Shop</a></li>
           <li class="menu-has-children"><a href="about">About Us</a>
-            <ul>
-              <li><a href="#">Mission</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="contact">Get in Touch</a></li>
-             
-            </ul></li>
-          <li class="menu-has-children"> <a href="services">Services</a>
-            <ul>
-              <li><a href="ceilings">Ceilings</a></li>
-              <li><a href="#">Skimming</a></li>
-              <li><a href="#">Framming</a></li>
-          
-            </ul></li>
-          <li class="menu-has-children"><a href="gallery">Gallery</a>
-            
+            <div class="sub-menu">
+              <ul>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Our Team</a></li>
+                
+              </ul>
+            </div>
           </li>
-          <li class="menu-has-children"> <a href="contact">Contact</a>
-            <ul>
-              <li><a href="about">About Us</a></li>
-        
-            </ul></li>
+          <li class="menu-has-children"> <a href="services">Services</a>
+            <div class="sub-menu">
+              <ul>
+                <li><a href="ceilings">Ceilings</a></li>
+                <li><a href="#">Skimming</a></li>
+                <li><a href="#">Framming</a></li>
+              </ul>
+            </div>
+            </li>
+            <li class="menu-has-children"> <a href="contact">Contact</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="about">About Us</a></li>
+                </ul>
+              </div>
+             </li>
+          <li class="menu-has-children"><a href="gallery">Gallery</a>
+          </li>
+         
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
-  <div class="dev" style="height: 80px; background-color:#2600"></div>
-  
+
 {% block content%}
 
 {%endblock%}
-  
   <hr style="color:whitesmoke;">
   <!-- eof flexslider -->
   <footer class="page_footer ds section_padding_top_100 section_padding_bottom_100 columns_padding_25">

@@ -28,7 +28,7 @@ urlpatterns = [
  
     path('',include('mukumba.urls')),
     path('admin/', admin.site.urls),
-   # path('myshop_mail/',include('myshop_mail.urls',namespace='myshop_mail')),
+    path('myshop_mail/',include('myshop_mail.urls',namespace='myshop_mail')),
     path('accounts/', include('allauth.urls')),
    
 ] 

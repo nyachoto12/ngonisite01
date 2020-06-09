@@ -47,7 +47,7 @@ INSTALLED_APPS = [
    'allauth.socialaccount',
    'mukumba',
    'crispy_forms',
-   # 'myshop_mail',
+   'myshop_mail',
   
     #'library',
     #'webproject',
