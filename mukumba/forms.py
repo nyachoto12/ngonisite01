@@ -11,7 +11,7 @@ class CommentForm(forms.Form):
     }))
     contact_message=forms.CharField(required=True, widget=forms.Textarea(attrs={
         'class': 'contact-form-message form-group bottommargin_0  form-control',
-        'placeholder':'Your comment/s here', 'rows':"3", 'cols':"45" 
+         'rows':"7", 'cols':"45" 
     }))
 
 class SubscribeForm(forms.Form):

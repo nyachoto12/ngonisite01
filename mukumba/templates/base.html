@@ -49,8 +49,9 @@ margin-left: 8px;
 }
 .loader h5{
 
-margin-left: 150px;
-  color: blue;
+margin-left: 0px;
+text-align:center;
+  color:chocolate;
  font-weight: 600;
  font-style: italic;
 }
@@ -66,14 +67,14 @@ margin-left: 150px;
 }
 </style>
 <header id="header">
- 
+  <div class="  loader ">
+    <div class="col-md-12 col-lg-6" >
+      <h5>Please wait while loading....</h5>
+    </div>
+  
+  </div>
     <div class="container">
-      <div class="  loader ">
-        <div class="col-md-12 col-lg-6" >
-          <h5>Please wait while loading....</h5>
-        </div>
       
-      </div>
 
       <nav class="fixed-top " >
         <div class="hamburger">
@@ -91,8 +92,8 @@ margin-left: 150px;
           <li class="menu-has-children"><a href="about">About Us</a>
             <div class="sub-menu">
               <ul>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Our Team</a></li>
+                <li><a href="#our_mission">Mission</a></li>
+            
                 
               </ul>
             </div>
@@ -130,26 +131,24 @@ margin-left: 150px;
     <div class="container">
       <div class="row" >
         <div class="footer">
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 col-sm-6 text-center">
             <div class="widget widget_text">
               <h4 class="widget-title with_line"> Contact Us </h4>
               <div>
-                <div class="media small-media inline-block">
+                <div class="widget widget_mailchimp">
                   <div class="media-left"> <i class="fa fa-map-marker highlight" aria-hidden="true"></i> </div>
                   <div class="media-body"> 128 Avondale West, Harare, Zimbabwe </div>
-                </div><br>
-                <div class="media small-media inline-block">
+               
+                          <br>
                   <div class="media-left"> <i class="fa fa-phone highlight" aria-hidden="true"></i> </div>
                   <div class="media-body"> 0778405957 </div>
-                </div><br>
-                <div class="media small-media inline-block">
+                       <br>
                   <div class="media-left"> <i class="fa fa-pencil highlight" aria-hidden="true"></i> </div>
                   <div class="media-body"> smkumba_ceiling@example.com </div>
-                </div><br>
-                <div class="media small-media greylinks inline-block">
+                         <br>
                   <div class="media-left"> <i class="fa fa-internet-explorer highlight" aria-hidden="true"></i> </div>
                   <div class="media-body"> <a href="www.mcc.com">Website</a> </div>
-                </div>
+               </div>
               </div>
             </div>
           </div>
@@ -157,10 +156,12 @@ margin-left: 150px;
             <div class="widget widget_mailchimp">
               <h4 class="widget-title with_line">Newsletter</h4>
               <form class="signup" action="gallery" method="post">
-                <p class="bottommargin_20">Subscribe to our mailing list to receive new updates and special offers:</p>
+                <p class="bottommargin_20 media-body">Subscribe to our mailing list to receive new updates and special offers. 
+                   Here we will help you get want you want in no time</p>
                 <div class="form-group-wrap">
                   <div class="form-group"> <label for="mailchimp" class="sr-only">Enter your email here</label> <input name="email" type="email" id="mailchimp" class="mailchimp_email form-control" placeholder="Your Email Address*"> 
-                  </div> <button type="submit" class="theme_button color1 no_bg_button" style="background: teal;">Subscribe</button>										</div>
+                 <br>
+                  </div> <button type="submit" class="theme_button color1 no_bg_button" >Subscribe</button>										</div>
                 <div class="response"></div>
               </form>
             </div>
@@ -169,10 +170,12 @@ margin-left: 150px;
             <div class="widget widget_mailchimp">
               <h4 class="widget-title with_line">About Designer</h4>
               <form class="signup" action="comment" method="post">
-                <p class="bottommargin_20">Subscribe to my mailing list to receive new updates and special offers from me:</p>
+                <p class="bottommargin_20 media-body">Subscribe to my mailing list to receive new updates and special offers from MCC.
+                   Here i will help you get want you want in no time </p>
                 <div class="form-group-wrap">
                   <div class="form-group"> <label for="mailchimp" class="sr-only">Enter your email here</label> <input name="email" type="email" id="mailchimp" class="mailchimp_email form-control" placeholder="Your Email Address*"> 
-                  </div> <button type="submit" class="theme_button color1 no_bg_button" style="background: teal;">Comment</button>										</div>
+                 <br>
+                  </div> <button type="submit" class="theme_button color1 no_bg_button" >Comment</button>										</div>
                 <div class="response"></div>
               </form>
             </div>

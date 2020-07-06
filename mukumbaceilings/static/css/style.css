@@ -11,9 +11,11 @@
   }
 
   .para{
+	 
 	  color: #222222;
 	  font-size: 18px;
 	  padding: 7px;
+	 
 	  margin-left: 10px;
   }
   header{
@@ -135,7 +137,7 @@
 	font-family: 'Times New Roman', Times, serif;
   }
   .media-body{
-	color: #222222;
+	color: whitesmoke;
   }
   a {
 	color: #596bf3;
@@ -206,7 +208,7 @@ margin-right: 5px;
 padding-right: 10px;
 }
 nav ul li a {
-	color: darkcyan;
+	color: chocolate;
 	font-size: 18px;
 	padding: 2px 7px;
 	transform: none;
@@ -486,7 +488,7 @@ display: none;
   }
   
   .owl-carousel .owl-nav > div:hover:after {
-	  color: teal;
+	  color:chocolate;
   }
   
   .top-right-nav .owl-nav {
@@ -773,7 +775,7 @@ display: none;
   }
   
   .owl-carousel.text-nav .owl-nav > div:hover {
-	  color: teal;
+	  color: chocolate;
   }
   
   .owl-carousel.text-nav .owl-nav > div:after {
@@ -902,7 +904,7 @@ display: none;
 	  cursor: pointer;
 	  font-size: 0;
 	  color: #222222;
-	  background-color: transparent;
+	  background-color: chocolate;
 	  text-align: center;
   }
   
@@ -1273,7 +1275,7 @@ display: none;
 	  font-size: 0;
 	  color: transparent;
 	  color: #222222;
-	  background:teal;
+	  background:chocolate;
 	  border-radius: 25px;
   }
   
@@ -1717,13 +1719,13 @@ background-color: chocolate;
   padding-top: 0px;
 }
 input[type="text"],
-input[type="email"],,
+input[type="email"],
 input[type="password"],
 textarea,
 select,
 .form-control {
 	height: 50px;
-	background-color: transparent;
+	background-color: whitesmoke;
 	border-radius: 3px;
 	box-shadow: none;
 	color: #222222;
@@ -1770,11 +1772,11 @@ select,
   color: #222222;
   font-family: 'Times New Roman', Times, serif;
 }
-.media-body{
-  color: #222222;
+.sr-only{
+	margin-top: 10px;
 }
 a {
-  color: #596bf3;
+  color:chocolate;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
@@ -3091,14 +3093,20 @@ h2.section_header + .fontsize_20 {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-
   }
-  
+ 
   #clients .owl-dot.active {
 	background-color: #596bf3;
   }
-  
-
+  #contact_form_submit{
+    float: left;
+	background-color: chocolate;
+  }
+.mission{
+	text-align: center;
+	margin-left: 60px;
+	font-size: 20px;
+} 
 .section-header{
 	margin-left: 0px;
 	text-align: center;
@@ -3192,10 +3200,21 @@ h2.section_header + .fontsize_20 {
 	vertical-align: super;
   }
   .footer {
+	 
 	  width: 100%;
-	  margin-left: -60px;
-      color: #222222;
+	  margin-left: 0;
+      color:whitesmoke;
 	  margin-top: 0px;
+  }
+  .container .footer{
+	background-color: teal;
+	width: 100%;
+
+  }
+  .widget-title {
+	  color: chocolate;
+	  background-color: whitesmoke;
+	  font-size: 26px;
   }
  .container .email{
 	  text-align: center;
@@ -3236,9 +3255,13 @@ margin-right: 5px;
 	margin-left: -35px;
 	padding-right: 10px;
 }
+.col-md-12 ul{
+	list-style: none;
+}
 .col-md-12 h4{
 	font-size: 28px;
-	
+	background-color: teal;
+	text-align: center;
 }
 .container-fluid .intro-image {
 	margin-top: 5px;
@@ -3246,30 +3269,60 @@ margin-right: 5px;
 	margin-left: 0px;
 	
 }
+#mywelcs h4{
+	color: whitesmoke;
+}
  #welc{
-	
-	text-align: center;
+
     color: #222222;
 }
 #welcx{
-	
-	text-align: center;
+	float: left;
     color: #222222;
 }
-#welcx h2{
-	
-	font-size: 28px;
-	font-style: italic;
-	padding-top: 5px;
-	color: #222222;
-	padding-bottom: 5px;
+span{
+	color: chocolate;
+	font-weight: bold;
 }
+
+#welcx h2{
+    margin-top: 15px;
+	font-size: 18px;
+	font-style: none;
+	padding-top: 5px;
+	color:whitesmoke;
+padding-bottom: 5px;
+	text-transform: uppercase;
+	background-color: teal;
+	width: 40%;
+	margin-left: 60px;
+	text-align: center;
+}
+#img-about img{
+	height: 370px;
+}
+.welc h1{
+width: 60%;
+margin-top: 15px;
+font-size: 20px;
+font-style: none;
+padding-top: 5px;
+color:whitesmoke;
+padding-bottom: 5px;
+text-transform: uppercase;
+background-color: teal;
+
+margin-left: 60px;
+text-align: center;
+}
+
  #welc h2{
-	font-size: 28px;
+	 
+	font-size: 18px;
 	font-style: italic;
 }
 #email-about{
-	background-color: teal;
+
 	margin-left: 10px;
 	padding-bottom: 10px;
 }
