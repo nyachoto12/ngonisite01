@@ -7,7 +7,7 @@
   {% block content %}
  
   <section class="intro_section page_mainslider ds">
-    <div class="flexslider" data-dots="true" data-nav="te">
+    <div class="flexslider" >
         <ul class="slides">
             <li> <img src="{% static 'img/picz/ceilingbg2.jpg' %}"  alt="one">
                 <div class="container">
@@ -16,7 +16,7 @@
                             <div class="slide_description_wrapper">
                                 <div class="slide_description">
                                     <div class="intro-layer" data-animation="fadeInUp">
-                                      <h2 style="font-size: 50px;">
+                                      <h2 style="font-size: 50px; color: chocolate">
                                       CONTACT US</h2>
                                         
                                          </div>
@@ -39,18 +39,17 @@
         </ul>
     </div>   
   </section> 
-  <section class="ds ms columns_padding_25 section_padding_top_100 section_padding_bottom_100">
-    <div class="container"style="width: 90%; margin-left: 130px;">
-      <div class="cotact">
-        <div class="row " style="margin-top: 0px;">
-          <div class="col-sm-12">
+
+    <div class="container"style="width: 100%; ">
+
+        <div class="row para" style="margin-top: 0px;">
+          <div class="col-sm-12 para">
             <h4>quotations here</h4>
             <p style="color: cadetblue; margin-top: 10px"><i>Please register your project here</i> </p>
           </div>
         </div>
         <div class="row">
-         
-          <div class="col-md-8 to_animate" data-animation="scaleAppear"></div>
+  
             <form class=" columns_padding_5 bottommargin_40" method="post" action="contact">
               {% csrf_token %}
               <div class="row">
@@ -81,44 +80,13 @@
               </div>
             </form>
           </div>
-          <div class="col-md-4 to_animate" data-animation="scaleAppear">
-            <ul class="list1 no-bullets no-top-border no-bottom-border">
-              <li>
-                <div class="media">
-                  <div class="media-left"> <i class="rt-icon2-shop highlight fontsize_18"></i> </div>
-                  <div class="media-body">
-                    <h6 class="media-heading grey">Postal Address:</h6> PO Box 128 Lomagundi Rd., Avondale West, Harare, Zimbabwe </div>
-                </div>
-              </li>
-              <li>
-                <div class="media">
-                  <div class="media-left"> <i class="rt-icon2-phone5 highlight fontsize_18"></i> </div>
-                  <div class="media-body">
-                    <h6 class="media-heading grey">Phone:</h6> 0778 405 957 </div>
-                </div>
-              </li>
-              <li>
-                <div class="media">
-                  <div class="media-left"> <i class="rt-icon2-stack4 highlight fontsize_18"></i> </div>
-                  <div class="media-body">
-                    <h6>Fax:</h6>xxxxxxxxxxxxxxxxxxxx </div>
-                </div>
-              </li>
-              <li>
-                <div class="media">
-                  <div class="media-left"> <i class="rt-icon2-mail highlight fontsize_18"></i> </div>
-                  <div class="media-body greylinks">
-                    <h6 class="media-heading grey">Email:</h6> <a href="mailto:your@mail.com">mukumbaceilings@@gmail.com</a> </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+        
         </div>
       </div>
     </div>
   
     
-  </section>
+
 
     
 {% endblock %}

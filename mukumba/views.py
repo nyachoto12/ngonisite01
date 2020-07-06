@@ -23,7 +23,7 @@ def about(request):
 
             try:
                 send_mail(contact_name, contact_email, contact_message, ['ngoninyachoto@gmail.com'])
-                messages.info(request,'Invalid credentials')
+                messages.info(request,'Message send successfully. We wil get back tou as soon as possible')
                 
                 
             except BadHeaderError:
@@ -31,6 +31,28 @@ def about(request):
         return redirect ('/')
 
     return render(request,'about.html', {'form': CommentForm })
+    
+def privacy(request):
+    Contact_Form=CommentForm
+    if request.method=='GET':
+        form=Contact_Form()
+    else:
+        form=Contact_Form(request.POST)
+        if form.is_valid():
+            contact_name = form.cleaned_data['contact_name']
+            contact_email = form.cleaned_data['contact_email']
+            contact_message = form.cleaned_data['contact_message']
+
+            try:
+                send_mail(contact_name, contact_email, contact_message, ['ngoninyachoto@gmail.com'])
+                messages.info(request,'Message send successfully. We wil get back tou as soon as possible')
+                
+                
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+        return redirect ('/')
+
+    return render(request,'privacy.html', {'form': CommentForm })
     
 
    
@@ -47,7 +69,7 @@ def Contact(request):
             saverecord.subject=request.POST.get('subject')
             saverecord.message=request.POST.get('message')
             saverecord.save()
-            messages.success(request,'New User Added Successful')
+            messages.success(request,'Quotation registered successfully. We will get back to you, please check your email after 24hrs. Thank you')
             return redirect("/")
 
     else:
