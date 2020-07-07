@@ -96,11 +96,14 @@
 	  border: 1px solid chocolate;
 	  font-family: 'Times New Roman', Times, serif;
   }
-  .container{
-	  width: 100%;
-	  margin-left: 0;
-	  margin-right: 0;
-  }
+  .container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
   .row .col-md-4 {
 	  margin: 0%;
 	  padding: 0%;
@@ -1262,22 +1265,21 @@ display: none;
   ** toTop
   */
   #toTop {
-	  bottom: 10px;
-	  right: 10px;
-	  display: none;
-	  width: 50px;
-	  height: 50px;
-	  overflow: hidden;
-	  position: fixed;
-	  text-decoration: none;
-	  z-index: 9999;
-	  font-size: 0;
-	  color: transparent;
-	  color: #222222;
-	  background:chocolate;
-	  border-radius: 25px;
-  }
-  
+	bottom: 10px;
+	right: 10px;
+	display: none;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	position: fixed;
+	text-decoration: none;
+	z-index: 9999;
+	font-size: 0;
+	color: transparent;
+	color: #222222;
+	background: chocolate;
+	border-radius: 25px;
+}
   @media (min-width: 768px) {
 	  #toTop {
 		  bottom: 30px;
@@ -1757,11 +1759,20 @@ select,
 .contact-form #quotation-form{
 	width: 100%;
 }
+.h1, h1 {
+	font-size: 2.5rem;
+	margin-top: 60px;
+}
 .col-sm-12,.col-sm-6{
 	
   font-size: 18px;
   color: #222222;
   font-family: 'Times New Roman', Times, serif;
+}
+#contact_form_submit {
+	float: left;
+	background-color: chocolate;
+	color: whitesmoke;
 }
 .col-sm-12 button{
   background: transparent;
@@ -2781,91 +2792,7 @@ html[xmlns] .slides {
 /* 
 ** toTop
 */
-#toTop {
-	bottom: 10px;
-	right: 10px;
-	display: none;
-	width: 50px;
-	height: 50px;
-	overflow: hidden;
-	position: fixed;
-	text-decoration: none;
-	z-index: 9999;
-	font-size: 0;
-	color: transparent;
-	color: #222222;
-	background:teal;
-	border-radius: 25px;
-}
 
-@media (min-width: 768px) {
-	#toTop {
-		bottom: 30px;
-		right: 30px;
-	}
-}
-
-@media (min-width: 992px) {
-	#toTop {
-		width: 60px;
-		height: 60px;
-		bottom: 60px;
-		right: 60px;
-		border-radius: 30px;
-	}
-
-}
-
-#toTop:after {
-	color: #222222;
-	content: "\f106";
-	font-size: 16px;
-	line-height: 50px;
-	font-family: FontAwesome;
-	text-align: center;
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	transition: all 0.2s linear;
-}
-
-@media (min-width: 992px) {
-	#toTop:after {
-		line-height: 60px;
-	}
-}
-
-#toTopHover, #toTop:hover {
-	bottom: 15px;
-	opacity: 1;
-}
-
-@media (min-width: 768px) {
-	#toTopHover, #toTop:hover {
-		bottom: 35px;
-	}
-}
-
-@media (min-width: 992px) {
-	#toTopHover, #toTop:hover {
-		bottom: 65px;
-	}
-}
-
-#toTop:hover:after {
-	color: #222222;
-}
-
-#toTop:active, #toTop:focus {
-	outline: medium none;
-}
-
-.modal-open #toTop {
-	visibility: hidden;
-}
 
 
 
@@ -3234,7 +3161,7 @@ h2.section_header + .fontsize_20 {
 	  background:green;
   }
   .col-lg-12 img {
-	width: 480px;
+	width: 100%;
 	height: 450px;
 	margin-right: 5px;
 	padding-top: 6px;
@@ -3339,7 +3266,7 @@ text-align: center;
 	filter: grayscale(0%);
 	transform: scale(1.1);
 }
-.gallery{
-	margin:40px 30px 0 25px;
-
+.gallery {
+	margin: 40px 30px 0 25px;
+	padding-left: 0px;
 }

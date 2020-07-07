@@ -97,8 +97,8 @@ EMAIL_USE_TLS=True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mccdatabase01',
-        'PASSWORD': '1234',
+        'NAME': 'mywebproject',
+        'PASSWORD': 'ngoni',
         'USER': 'postgres',
         'HOST': 'localhost',
         
