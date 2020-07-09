@@ -210,11 +210,11 @@ margin-right: 5px;
 padding-right: 10px;
 }
 nav ul li a {
-	color: chocolate;
 	font-size: 18px;
 	padding: 2px 7px;
 	transform: none;
 	transition: all .5s ease-in-out;
+	color: chocolate;
 }
 a.menu-active,a:hover{
 	color: #222222;
@@ -1277,7 +1277,7 @@ display: none;
 	font-size: 0;
 	color: transparent;
 	color: #222222;
-	background: chocolate;
+	background: red;
 	border-radius: 25px;
 }
   @media (min-width: 768px) {
@@ -1740,10 +1740,13 @@ select,
 	border: 1px solid chocolate;
 	font-family: 'Times New Roman', Times, serif;
 }
-.container{
+.container {
 	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5px;
 }
 .row .col-md-4 {
 	margin: 0%;
@@ -3161,7 +3164,7 @@ h2.section_header + .fontsize_20 {
 	  background:green;
   }
   .col-lg-12 img {
-	width: 100%;
+	width: 480px;
 	height: 450px;
 	margin-right: 5px;
 	padding-top: 6px;
@@ -3194,7 +3197,7 @@ margin-right: 5px;
 }
 .container-fluid .intro-image {
 	margin-top: 5px;
-	width: 100%;
+	width: 50%;
 	margin-left: 0px;
 	
 }
@@ -3275,9 +3278,8 @@ text-align: center;
 	padding-left: 5px;
 }
 .galle img{
-	width: 300px;
+	width: 400px;
 	height: 200px;
 	padding-top: 5px;
-	filter: grayscale(100%);
 	transition: 1s;
 }
