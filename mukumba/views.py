@@ -94,7 +94,7 @@ def Gallery(request):
 
             try:
                 send_mail(contact_name, contact_email, contact_message, ['ngoninyachoto@gmail.com'])
-                messages.info(request,'Invalid credentials')
+                messages.info(request,'Message send successfully. We wil get back tou as soon as possible')
                 
                 
             except BadHeaderError:

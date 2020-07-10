@@ -6,7 +6,40 @@
     
   {% block content %}
 
-     <div class="container">
+     <div class="container" id="gal">
+    
+      <div class="container">
+        <div class="g-header">
+           <h1 >OUR WORK IN PICTURES</h1>
+           <p style="color: coral; margin-top: 10px"><i>Below we show you our projects thta are finished and those that are still in progress.
+              Please enjoy and dont feel bad to comment on our work above.
+           </i> </p>
+        </div>
+     
+    </div>
+    <div class="gallery">
+       
+       <a href="{% static 'img/picz/nicepicboys.jpg'%}"data-lightbox="myphotogallery"><img src="{% static 'img/picz/nicepicboys.jpg' %}"  alt="one"></a>
+       <a href="{% static 'img/picz/nicecon1.jpg'%}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/nicecon1.jpg' %}"  alt="one"></a>
+         <a href="{% static 'img/picz/bgwhitenice.jpg'%}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/bgwhitenice.jpg' %}"  alt="one"></a>
+           <a href="{% static 'img/picz/frame001.jpg'%}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/frame001.jpg' %}"  alt="one"></a>
+             <a href="{% static 'img/picz/coffered.jpg'%}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/coffered.jpg' %}"  alt="one"></a>
+               <a href="{% static 'img/picz/roundnice.jpg'%}"data-lightbox="myphotogallery">   <img src="{% static 'img/picz/roundnice.jpg' %}"  alt="one"></a>
+                 <a href="{% static 'img/picz/smallcon1.jpg'%}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/smallcon1.jpg' %}"  alt="one"></a>
+                   <a href="{% static 'img/picz/smallcon2.jpg'%}"data-lightbox="myphotogallery">   <img src="{% static 'img/picz/smallcon2.jpg' %}"  alt="one"></a>
+                     <a href="{% static 'img/picz/work1.jpg' %}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/work1.jpg' %}"  alt="one"></a>
+                       <a href="{% static 'img/picz/work1.jpg'%}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/work1.jpg' %}"  alt="one"></a>
+                         <a href="{% static 'img/picz/work1.jpg' %}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/work1.jpg' %}"  alt="one"></a>
+                 <img src="{% static 'img/picz/work1.jpg' %}"  alt="one">
+                 <img src="{% static 'img/picz/work1.jpg' %}"  alt="one">
+                 <img src="{% static 'img/picz/nicepicboys.jpg' %}"  alt="one">
+                 <img src="{% static 'img/picz/nicecon1.jpg' %}"  alt="one">
+                 <img src="{% static 'img/picz/bgwhitenice.jpg' %}"  alt="one">
+       
+       
+   </div>
+  
+   
 
         <h1 >Thank you so much</h1>
         <p style="color: cadetblue; margin-top: 10px"><i>If you have anything to say about our work.
@@ -23,9 +56,9 @@
             {{form.contact_message}}
            
             <div class="col-sm-12 bottommargin_0">
-              <div class="contact-form-submit topmargin_10"> <button type="submit" id="contact_form_submit" name="contact_submit"  size="30" class="theme_button color1 wide_button margin_0" bgcolor='teal'>Submit Comment
+              <div class="contact-form-submit topmargin_10"> <button type="submit" id="contact_form_submit" name="contact_submit"  size="30" class="theme_button color1 wide_button margin_0">Submit Comment
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Loading...
+      
               </button> </div>
             </div>
  
@@ -35,40 +68,7 @@
         {% endfor%}
     </div>
    </div>
-        
-     <div class="container">
-         <div class="g-header">
-            <h1 >OUR WORK IN PICTURES</h1>
-            <p style="color: cadetblue; margin-top: 10px"><i>Below we show you our projects thta are finished and those that are still in progress.
-               Please enjoy and dont feel bad to comment on our work above.
-            </i> </p>
-         </div>
-      
-     </div>
-     <div class="gallery">
-        
-        <a href="{% static 'img/picz/nicepicboys.jpg'%}"data-lightbox="myphotogallery"><img src="{% static 'img/picz/nicepicboys.jpg' %}"  alt="one"></a>
-        <a href="{% static 'img/picz/nicecon1.jpg'%}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/nicecon1.jpg' %}"  alt="one"></a>
-          <a href="{% static 'img/picz/bgwhitenice.jpg'%}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/bgwhitenice.jpg' %}"  alt="one"></a>
-            <a href="{% static 'img/picz/frame001.jpg'%}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/frame001.jpg' %}"  alt="one"></a>
-              <a href="{% static 'img/picz/coffered.jpg'%}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/coffered.jpg' %}"  alt="one"></a>
-                <a href="{% static 'img/picz/roundnice.jpg'%}"data-lightbox="myphotogallery">   <img src="{% static 'img/picz/roundnice.jpg' %}"  alt="one"></a>
-                  <a href="{% static 'img/picz/smallcon1.jpg'%}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/smallcon1.jpg' %}"  alt="one"></a>
-                    <a href="{% static 'img/picz/smallcon2.jpg'%}"data-lightbox="myphotogallery">   <img src="{% static 'img/picz/smallcon2.jpg' %}"  alt="one"></a>
-                      <a href="{% static 'img/picz/work1.jpg' %}"data-lightbox="myphotogallery">  <img src="{% static 'img/picz/work1.jpg' %}"  alt="one"></a>
-                        <a href="{% static 'img/picz/work1.jpg'%}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/work1.jpg' %}"  alt="one"></a>
-                          <a href="{% static 'img/picz/work1.jpg' %}"data-lightbox="myphotogallery"> <img src="{% static 'img/picz/work1.jpg' %}"  alt="one"></a>
-                  <img src="{% static 'img/picz/work1.jpg' %}"  alt="one">
-                  <img src="{% static 'img/picz/work1.jpg' %}"  alt="one">
-                  <img src="{% static 'img/picz/nicepicboys.jpg' %}"  alt="one">
-                  <img src="{% static 'img/picz/nicecon1.jpg' %}"  alt="one">
-                  <img src="{% static 'img/picz/bgwhitenice.jpg' %}"  alt="one">
-        
-        
-    </div>
-   
     
-
    {% endblock %}
 
 </body>

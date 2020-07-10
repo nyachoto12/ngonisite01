@@ -28,48 +28,6 @@ function initCounter(self) {
 		self.countTo().addClass('counted');
 	}
 }
-/*function initProgressbar(el) {
-	el.progressbar({
-		transition_delay: 300
-	});
-}
-function initChart(el) {
-	var data = el.data();
-	var size = data.size ? data.size : 270;
-	var line = data.line ? data.line : 20;
-	var bgcolor = data.bgcolor ? data.bgcolor : '#ffffff';
-	var trackcolor = data.trackcolor ? data.trackcolor : '#c14240';
-	var speed = data.speed ? data.speed : 3000;
-
-	el.easyPieChart({
-		barColor: trackcolor,
-		trackColor: bgcolor,
-		scaleColor: false,
-		scaleLength: false,
-		lineCap: 'butt',
-		lineWidth: line,
-		size: size,
-		rotate: 0,
-		animate: speed,
-		onStep: function(from, to, percent) {
-			jQuery(this.el).find('.percent').text(Math.round(percent));
-		}
-	});
-}*/
-
-/*/wrap select element in select-group
-function wrapSelect() {
-	jQuery('.wrap-select-group, .cryptonatorwidget select').each(function() {
-		var $select = jQuery( this );
-		if ( $select.hasClass('select2-hidden-accessible') ) {
-			return;
-		}
-		$select.wrap('<div class="form-group select-group"></div>').after('<i class="fa fa-angle-down theme_button color1 no_bg_button" aria-hidden="true"></i>');
-		if ( $select.hasClass('wrap-select-group') ) {
-			$select.addClass('empty choice');
-		}
-	})
-}*/
 
 //equalize header side columns width
 function headerColumnsEqualize() {
@@ -200,72 +158,7 @@ function windowLoadInit() {
 		boxWrapperWidth = jQuery('#box_wrapper').width();
 	});
 	//2/3/4 levels
-	/*
-	jQuery('.mainmenu_wrapper .sf-menu').on('mouseover', 'ul li', function(){
-	// jQuery('.mainmenu').on('mouseover', 'ul li', function(){
-		if(MainWindowWidth > 991) {
-			var $this = jQuery(this);
-			// checks if third level menu exist         
-			var subMenuExist = $this.find('ul').length;
-			if( subMenuExist > 0){
-				var subMenuWidth = $this.find('ul, div').first().width();
-				var subMenuOffset = $this.find('ul, div').first().parent().offset().left + subMenuWidth;
-				// if sub menu is off screen, give new position
-				if((subMenuOffset + subMenuWidth) > boxWrapperWidth){
-					var newSubMenuPosition = subMenuWidth + 0;
-					$this.find('ul, div').first().css({
-						left: -newSubMenuPosition,
-					});
-				} else {
-					$this.find('ul, div').first().css({
-						left: '100%',
-					});
-				}
-			}
-		}
-	//1st level
-	}).on('mouseover', '> li', function(){
-		if(MainWindowWidth > 991) {
-			var $this = jQuery(this);
-			var subMenuExist = $this.find('ul').length;
-			if( subMenuExist > 0){
-				var subMenuWidth = $this.find('ul').width();
-				var subMenuOffset = $this.find('ul').parent().offset().left - (jQuery(window).width() / 2 - boxWrapperWidth / 2);
-				// if sub menu is off screen, give new position
-				if((subMenuOffset + subMenuWidth) > boxWrapperWidth){
-					var newSubMenuPosition = boxWrapperWidth - (subMenuOffset + subMenuWidth);
-					$this.find('ul').first().css({
-						left: newSubMenuPosition,
-					});
-				} 
-			}
-		}
-	});
 	
-	/////////////////////////////////////////
-	//single page localscroll and scrollspy//
-	/////////////////////////////////////////
-	var navHeight = jQuery('.page_header').outerHeight(true);
-	//if sidebar nav exists - binding to it. Else - to main horizontal nav
-	if (jQuery('.mainmenu_side_wrapper').length) {
-		$body.scrollspy({
-			target: '.mainmenu_side_wrapper',
-			offset: navHeight
-		});
-	} else if (jQuery('.mainmenu_wrapper').length) {
-		$body.scrollspy({
-			target: '.mainmenu_wrapper',
-			offset: navHeight 
-		})
-	}
-	if (jQuery().localScroll) {
-		jQuery('.mainmenu_wrapper > ul, .mainmenu_side_wrapper > ul, #land, .scroll_button_wrap, .intro-layer').localScroll({
-			duration:900,
-			easing:'easeInOutQuart',
-			offset: -navHeight+40
-		});
-	}
-*/
 	//background image teaser and secitons with half image bg
 	//put this before prettyPhoto init because image may be wrapped in prettyPhoto link
 	jQuery(".bg_teaser, .image_cover").each(function(){
@@ -297,20 +190,7 @@ function windowLoadInit() {
 		jQuery('.parallax').parallax("50%", 0.01);
 	}
 	
-	//prettyPhoto
-	/*if (jQuery().prettyPhoto) {
-		jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({
-			hook: 'data-gal',
-			theme: 'facebook', /* light_rounded / dark_rounded / light_square / dark_square / facebook / pp_default*/
-		/*	social_tools: false,
-			default_width: 1170,
-			default_height: 780
-		});
-	}
-	*/
-	////////////////////////////////////////
-	//init Bootstrap JS components//
-	////////////////////////////////////////
+	
 	//bootstrap carousel
 	if (jQuery().carousel) {
 		jQuery('.carousel').carousel();
@@ -332,18 +212,6 @@ function windowLoadInit() {
 	}
 
 	
-
-	/*//comingsoon counter
-	if (jQuery().countdown) {
-		//today date plus month for demo purpose
-		var demoDate = new Date();
-		demoDate.setMonth(demoDate.getMonth()+1);
-		jQuery('#comingsoon-countdown').countdown({until: demoDate});
-	}
-*/
-	/////////////////////////////////////////////////
-	//PHP widgets - contact form, search, MailChimp//
-	/////////////////////////////////////////////////
 
 	//contact form processing
 	jQuery('form.contact-form').on('submit', function( e ){
@@ -385,48 +253,7 @@ function windowLoadInit() {
 	});
 
 
-	/*//search modal
-	jQuery(".search_modal_button").on('click', function(e){
-		e.preventDefault();
-		jQuery('#search_modal').modal('show').find('input').first().focus();
-	});
-	//search form processing
-	jQuery('form.searchform').on('submit', function( e ){
-		
-		e.preventDefault();
-		var $form = jQuery(this);
-		var $searchModal = jQuery('#search_modal');
-		$searchModal.find('div.searchform-respond').remove();
-
-		//checking on empty values
-		jQuery($form).find('[type="text"]').each(function(index) {
-			var $thisField = jQuery(this);
-			if (!$thisField.val().length) {
-				$thisField
-					.addClass('invalid')
-					.on('focus', function(){
-						$thisField.removeClass('invalid')
-					});
-			}
-		});
-		//if one of form fields is empty - exit
-		if ($form.find('[type="text"]').hasClass('invalid')) {
-			return;
-		}
-
-		$searchModal.modal('show');
-		//sending form data to PHP server if fields are not empty
-		var request = $form.serialize();
-		var ajax = jQuery.post( "search.php", request )
-		.done(function( data ) {
-			$searchModal.append('<div class="searchform-respond">'+data+'</div>');
-		})
-		.fail(function( data ) {
-			$searchModal.append('<div class="searchform-respond">Search cannot be done. You need PHP server to search.</div>');
-			
-		})
-	});
-*/
+	
 	//MailChimp subscribe form processing
 	jQuery('.signup').on('submit', function( e ) {
 		e.preventDefault();
@@ -442,133 +269,7 @@ function windowLoadInit() {
 			}
 		});
 	});
-	/*
-	//twitter
-	if (jQuery().tweet) {
-		jQuery('.twitter').tweet({
-			modpath: "./twitter/",
-			count: 2,
-			avatar_size: 48,
-			loading_text: 'loading twitter feed...',
-			join_text: 'auto',
-			username: 'michaeljackson', 
-			template: "<span class=\"tweet_text\">{tweet_text}</span><span class=\"greylinks black small-text\"> {time}</span>"
-		});
-	}
 
-
-	//adding CSS classes for elements that needs different styles depending on they widht width
-	//see 'plugins.js' file
-	jQuery('#mainteasers .col-lg-4').addWidthClass({
-		breakpoints: [500, 600]
-	});
-
-	// init timetable
-	var $timetable = jQuery('#timetable');
-	if ($timetable.length) {
-		// bind filter click
-		jQuery('#timetable_filter').on( 'click', 'a', function( e ) {
-			e.preventDefault();
-			e.stopPropagation();
-			var $thisA = jQuery(this);
-			if ( $thisA.hasClass('selected') ) {
-				// return false;
-				return;
-			}
-			var selector = $thisA.attr('data-filter');
-			$timetable
-				.find('tbody td')
-				.removeClass('current')
-				.end()
-				.find(selector)
-				.closest('td')
-				.addClass('current');
-			$thisA.closest('ul').find('a').removeClass('selected');
-			$thisA.addClass('selected');
-	  });
-	}
-
-	/////////
-	//SHOP///
-	/////////
-	jQuery('#toggle_shop_view').on('click', function( e ) {
-		e.preventDefault();
-		jQuery(this).toggleClass('grid-view');
-		jQuery('#products').toggleClass('grid-view list-view');
-	});
-	//zoom image
-	if (jQuery().elevateZoom) {
-		jQuery('#product-image').elevateZoom({
-			gallery: 'product-image-gallery',
-			cursor: 'pointer', 
-			galleryActiveClass: 'active', 
-			responsive:true, 
-			loadingIcon: 'img/AjaxLoader.gif'
-		});
-	}
-	
-	//add review button
-	jQuery('.review-link').on('click', function( e ) {
-		var $thisLink = jQuery(this);
-		var reviewTabLink = jQuery('a[href="#reviews_tab"]');
-		//show tab only if it's hidden
-		if (!reviewTabLink.parent().hasClass('active')) {
-			reviewTabLink
-			.tab('show')
-			.on('shown.bs.tab', function (e) {
-				$window.scrollTo($thisLink.attr('href'), 400);
-			})
-		}
-		$window.scrollTo($thisLink.attr('href'), 400);
-	});
-
-	//product counter
-	jQuery('.plus, .minus').on('click', function( e ) {
-		var numberField = jQuery(this).parent().find('[type="number"]');
-		var currentVal = numberField.val();
-		var sign = jQuery(this).val();
-		if (sign === '-') {
-			if (currentVal > 1) {
-				numberField.val(parseFloat(currentVal) - 1);
-			}
-		} else {
-			numberField.val(parseFloat(currentVal) + 1);
-		}
-	});
-	
-	//remove product from cart
-	jQuery('a.remove').on('click', function( e ) {
-		e.preventDefault();
-		jQuery(this).closest('tr, .media').remove();
-	});
-
-	//price filter - only for HTML
-	if (jQuery().slider) {
-		var $rangeSlider = jQuery(".slider-range-price");
-		if ($rangeSlider.length) {
-			var $priceMin = jQuery(".price_from");
-			var $priceMax = jQuery(".price_to");
-			$rangeSlider.slider({
-				range: true,
-				min: 0,
-				max: 200,
-				values: [ 30, 100 ],
-				slide: function( event, ui ) {
-					$priceMin.html( '$' + ui.values[ 0 ] );
-					$priceMax.html( '$' + ui.values[ 1 ] );
-				}
-			});
-			$priceMin.html('$' + $rangeSlider.slider("values", 0));
-			$priceMax.html('$' + $rangeSlider.slider("values", 1));
-		}
-	}
-
-	//color filter 
-	jQuery(".color-filters").find("a[data-background-color]").each(function() {
-		jQuery(this).css({"background-color" : jQuery(this).data("background-color")});
-	}); // end of SHOP
-	///eof docready
-*/
 	//////////////
 	//flexslider//
 	//////////////
@@ -661,85 +362,7 @@ function windowLoadInit() {
 		});
 	}
 
-	////////////////////
-	//header processing/
-	////////////////////
-	//stick header to top
-	//wrap header with div for smooth sticking
-/*	var $header = jQuery('.page_header').first();
-	var boxed = $header.closest('.boxed').length;
-	if ($header.length) {
-		//hiding main menu 1st levele elements that do not fit width
-		menuHideExtraElements();
-		//mega menu
-		initMegaMenu();
-		//wrap header for smooth stick and unstick
-		var headerHeight = $header.outerHeight();
-		$header.wrap('<div class="page_header_wrapper"></div>');
-		var $headerWrapper = $header.parent();
-		if (!boxed) {
-			$headerWrapper.css({height: $header.outerHeight()}); 
-		}
-
-		headerColumnsEqualize();
-
-		//headerWrapper background
-		if( $header.hasClass('header_white') ) {
-			$headerWrapper.addClass('header_white');
-		} else if ( $header.hasClass('header_darkgrey') ) {
-			$headerWrapper.addClass('header_darkgrey');
-			if ( $header.hasClass('bs') ) {
-				$headerWrapper.addClass('bs');
-			}
-
-		} else if ( $header.hasClass('header_gradient') ) {
-			$headerWrapper.addClass('header_gradient');
-		}
-
-		if ( $header.hasClass('header_transparent') ) {
-			$headerWrapper.addClass('header_transparent_wrap')
-		}
-
-		//get offset
-		var headerOffset = 0;
-		//check for sticked template headers
-		if (!boxed && !($headerWrapper.css('position') === 'fixed')) {
-			headerOffset = $header.offset().top;
-
-			if ($header.css('padding-top') === '65px') {
-				headerOffset += 65;
-			}
-		}
-
-		//for boxed layout - show or hide main menu elements if width has been changed on affix
-		jQuery($header).on('affixed-top.bs.affix affixed.bs.affix affixed-bottom.bs.affix', function ( e ) {
-			if( $header.hasClass('affix-top') ) {
-				$headerWrapper.removeClass('affix-wrapper affix-bottom-wrapper').addClass('affix-top-wrapper');
-			} else if ( $header.hasClass('affix') ) {
-				$headerWrapper.removeClass('affix-top-wrapper affix-bottom-wrapper').addClass('affix-wrapper');
-			} else if ( $header.hasClass('affix-bottom') ) {
-				$headerWrapper.removeClass('affix-wrapper affix-top-wrapper').addClass('affix-bottom-wrapper');
-			} else {
-				$headerWrapper.removeClass('affix-wrapper affix-top-wrapper affix-bottom-wrapper');
-			}
-			menuHideExtraElements();
-			initMegaMenu();
-		});
-
-		//if header has different height on afixed and affixed-top positions - correcting wrapper height
-		jQuery($header).on('affixed-top.bs.affix', function () {
-			// $headerWrapper.css({height: $header.outerHeight()});
-		});
-
-		jQuery($header).affix({
-			offset: {
-				top: headerOffset,
-				bottom: 0
-			}
-		});
-
-	}
-*/
+	
 	////////////////////
 	//triggered search//
 	////////////////////
@@ -890,42 +513,7 @@ function windowLoadInit() {
 			});
 		});
 
-		/*/counters init on scroll
-		if (jQuery().countTo) {
-			jQuery('.counter').appear();
-			
-			jQuery('.counter').filter(':appeared').each(function(){
-				initCounter(jQuery(this));
-			});
-			$body.on('appear', '.counter', function(e, $affected ) {
-				jQuery($affected).each(function(){
-					initCounter(jQuery(this));
-				});
-			});
-		}
-		*/
-		//bootstrap animated progressbar
-		/**if (jQuery().progressbar) {
-			jQuery('.progress .progress-bar').appear();
-
-			jQuery('.progress .progress-bar').filter(':appeared').each(function(){
-				initProgressbar(jQuery(this));
-			});
-			$body.on('appear', '.progress .progress-bar', function(e, $affected ) {
-				jQuery($affected).each(function(){
-					initProgressbar(jQuery(this));
-				});
-			});
-			//animate progress bar inside bootstrap tab
-			jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-				initProgressbar(jQuery(jQuery(e.target).attr('href')).find('.progress .progress-bar'));
-			});
-			//animate progress bar inside bootstrap dropdown
-			jQuery('.dropdown').on('shown.bs.dropdown', function(e) {
-				initProgressbar(jQuery(this).find('.progress .progress-bar'));
-			});
-		}
-*/
+		
 		///circle progress bar
 		if (jQuery().easyPieChart) {
 
@@ -944,134 +532,7 @@ function windowLoadInit() {
 
 	} //appear check
 
-	//Flickr widget
-	/*/ use http://idgettr.com/ to find your ID
-	if (jQuery().jflickrfeed) {
-		var $flickr = jQuery("#flickr, .flickr_ul");
-		if ( $flickr.length ) {
-			if ( ! ( $flickr.hasClass('flickr_loaded') ) ) {
-				$flickr.jflickrfeed({
-					flickrbase: "http://api.flickr.com/services/feeds/",
-					limit: 4,
-					qstrings: {
-						id: "131791558@N04"
-					},
-					itemTemplate: '<a href="{{image_b}}" data-gal="prettyPhoto[pp_gal]"><li><img alt="{{title}}" src="{{image_m}}" /></li></a>'
-				}, function(data) {
-					$flickr.find('a').prettyPhoto({
-						hook: 'data-gal',
-						theme: 'facebook'
-					});
-				}).addClass('flickr_loaded');
-			}
-		}
-	}
-*/
-	/*/ Instagram widget
-	if(jQuery().spectragram) {
-		var Spectra = {
-			instaToken: '3905738328.60c782d.b65ed3f058d64e6ab32c110c6ac12d9b',
-			instaID: '60c782dfecaf4050b59ff4c159246641',
-
-			init: function () {
-				jQuery.fn.spectragram.accessData = {
-					accessToken: this.instaToken,
-					clientID: this.instaID
-				};
-
-				//available methods: getUserFeed, getRecentTagged
-				jQuery('.instafeed').each(function(){
-					var $this = jQuery(this);
-					if ($this.find('img').length) {
-						return;
-					}
-					$this.spectragram('getRecentTagged',{
-						max: 4,
-						//pass username if you are using getUserFeed method
-						query: 'grey',
-						wrapEachWith: '<div class="photo">'
-					});
-				});
-			}
-		}
-
-		Spectra.init();
-	}
-
-	//video images preview - from WP
-	jQuery('.embed-placeholder').each(function(){
-		jQuery(this).on('click', function(e) {
-			var $thisLink = jQuery(this);
-			// if prettyPhoto popup with YouTube - return
-			if ($thisLink.attr('data-gal')) {
-				return;
-			}
-			e.preventDefault();
-			if ($thisLink.attr('href') === '' || $thisLink.attr('href') === '#') {
-				$thisLink.replaceWith($thisLink.data('iframe').replace(/&amp/g, '&').replace(/$lt;/g, '<').replace(/&gt;/g, '>').replace(/$quot;/g, '"')).trigger('click');
-			} else {
-				$thisLink.replaceWith('<iframe class="embed-responsive-item" src="'+ $thisLink.attr('href') + '?rel=0&autoplay=1'+ '"></iframe>');
-			}
-		});
-	});
-
-	// init Isotope
-	jQuery('.isotope_container').each(function(index) {
-		var $container = jQuery(this);
-		var layoutMode = ($container.hasClass('masonry-layout')) ? 'masonry' : 'fitRows';
-		var columnWidth = ($container.find('.col-lg-20').length) ? '.col-lg-20' : '';
-		$container.isotope({
-			percentPosition: true,
-			layoutMode: layoutMode,
-			masonry: {
-				//for big first element in grid - giving smaller element to use as grid
-				columnWidth: columnWidth
-			}
-		});
-
-		var $filters = jQuery(this).attr('data-filters') ? jQuery(jQuery(this).attr('data-filters')) : $container.prev().find('.filters');
-		// bind filter click
-		if ($filters.length) {
-			$filters.on( 'click', 'a', function( e ) {
-				e.preventDefault();
-				var $thisA = jQuery(this);
-				var filterValue = $thisA.attr('data-filter');
-				$container.isotope({ filter: filterValue });
-				$thisA.siblings().removeClass('selected active');
-				$thisA.addClass('selected active');
-			});
-			//for works on select
-			$filters.on( 'change', 'select', function( e ) {
-				e.preventDefault();
-				var filterValue = jQuery(this).val();
-				$container.isotope({ filter: filterValue });
-			});
-		}
-	});
-
-	//Unyson or other messages modal
-	var $messagesModal = jQuery('#messages_modal');
-	if ($messagesModal.find('ul').length) {
-		$messagesModal.modal('show');
-	}
-
-	// prevent search form trigger from scrolling to top
-	jQuery('.search_form_trigger').on( 'click', function($e) {
-	    $e.preventDefault();
-	});
-
-	//prevent default action of # links
-	jQuery("[href='#0']").on( 'click', function($e) {
-		$e.preventDefault();
-	});
-
-	//wrap select elements in .select-group
-	wrapSelect();
-
-	if (jQuery().cuePlaylist) {
-		cue.initialize();
-	}
-*/
+	
 	//page preloader
 	jQuery(".preloaderimg").fadeOut(150);
 	jQuery(".preloader").fadeOut(350).delay(200, function(){
